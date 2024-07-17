@@ -1,2 +1,141 @@
 # bhagirath-gamer.com
 ff
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+        }
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .attendance-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .attendance-form label, .attendance-form select, .attendance-form button {
+            margin: 10px 0;
+        }
+        .attendance-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .attendance-form button:hover {
+            background-color: #45a049;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>School Attendance</h1>
+    </div>
+    <div class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#reports">Reports</a>
+        <a href="#students">Students</a>
+    </div>
+    <div class="container">
+        <div id="dashboard" class="card">
+            <h2>Dashboard</h2>
+            <p>Welcome to the school attendance system!</p>
+            <!-- Add dashboard summary and statistics here -->
+        </div>
+        <div id="attendance" class="card">
+            <h2>Record Attendance</h2>
+            <form class="attendance-form">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                
+                <label for="class">Class:</label>
+                <select id="class" name="class">
+                    <option value="grade1">Grade 1</option>
+                    <option value="grade2">Grade 2</option>
+                    <!-- Add more classes as needed -->
+                </select>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic attendance rows will be inserted here -->
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Present</td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
